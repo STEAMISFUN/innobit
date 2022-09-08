@@ -1,6 +1,5 @@
 {
     "name": "innobit",
-    "icon": "Icon.jpeg",
     "description": "This is the extension for innobit.",
     "dependencies": {
         "core": "*",
@@ -31,5 +30,6 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "tsprj",
+    "icon": "Icon.jpeg"
 }
