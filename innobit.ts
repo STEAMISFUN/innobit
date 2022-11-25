@@ -552,6 +552,55 @@ namespace innobit {
     }
 
 
+    ///////////////////// 热释电模块 ///////////////////////
+
+    /**
+     * Read the specified pin or connector as either 0 or 1
+     * @param name pin to read from, eg: DigitalPin.P0
+     */
+   
+    //% help=pins/digital-read-pin 
+    //% blockId="Fan_M22" weight=12 blockGap=17
+    //% block="PIR value|"
+    //% subcategory="SPIR sensor"
+    export function Fan_M22(): number {
+        pins.digitalWritePin(DigitalPin.P0, 0);
+        return pins.digitalReadPin(DigitalPin.P0);
+    }
+   
+
+
+
+    ///////////////////// 电风扇模块 ///////////////////////
+
+    /**
+        *  Initialize Electric Fan M2
+        *  Set Electric Fan speed M2
+        * @param set Electric Fan speed (0 to 100)
+        */
+    //% blockId="Fan_M2" weight=12 blockGap=17
+    //% block="Electric Fan M2 speed %speed percent|"
+    //% speed.min=0 speed.max=100
+    //% subcategory="Electric Fan"
+    export function Fan_M2(speed: number) {
+        motorRun(MPMotors.M2, MPDir.Forward, speed * 2.55)
+    }
+
+
+    /**
+        *  Initialize Electric Fan M1
+        *  Set Electric Fan speed M1
+        * @param set Electric Fan speed (0 to 100)
+        */
+    //% blockId="Fan_M1" weight=15 blockGap=15
+    //% block="Electric Fan M1 speed %speed percent|"
+    //% speed.min=0 speed.max=100
+    //% subcategory="Electric Fan"
+    export function Fan_M1(speed: number) {
+        motorRun(MPMotors.M1, MPDir.Forward, speed * 2.55)
+   }
+
+
 
 
 
