@@ -378,7 +378,7 @@ namespace innobit {
      */
     //% subcategory="LED Strip"
     //% blockId="LED_setPixelColor3" 
-    //% block=" Set pixel 1 color to %rgb1=LED_colors | Set pixel 2 color to %rgb2=LED_colors | Set pixel 3 color to %rgb3=LED_colors"
+    //% block=" Set Light 1 color to %rgb1=LED_colors | Set Light 2 color to %rgb2=LED_colors | Set Light 3 color to %rgb3=LED_colors"
     export function LED_setPixelColor3(rgb1: number, rgb2: number, rgb3: number): void {
         //初始化LED数据
         if (bp) {
@@ -425,7 +425,7 @@ namespace innobit {
   */
     //% subcategory="LED Strip"
     //% blockId="LED_setPixelColor32" 
-    //% block=" Set pixel 1 color to: | red %red1 green %green1 blue %blue1 | Set pixel 2 color to: | red %red2 green %green2 blue %blue2 | Set pixel 3 color to | red %red3 green %green3 blue %blue3"
+    //% block=" Set Light 1 color to: | red %red1 green %green1 blue %blue1 | Set Light 2 color to: | red %red2 green %green2 blue %blue2 | Set Light 3 color to | red %red3 green %green3 blue %blue3"
     //% red1.min=0 red1.max=255  green1.min=0 green1.max=255  blue1.min=0 blue1.max=255
     //% red2.min=0 red2.max=255  green2.min=0 green2.max=255  blue2.min=0 blue2.max=255
     //% red3.min=0 red3.max=255  green3.min=0 green3.max=255  blue3.min=0 blue3.max=255
