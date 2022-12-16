@@ -1,6 +1,9 @@
 
 > 在 [https://antluun.github.io/module1/](https://antluun.github.io/module1/) 打開此頁面
 
+## A link to the Steamfun product page
+* http://www.steamfun.co.uk/shop
+
 ## 作為擴充功能使用
 
 可以在 MakeCode 中將此儲存庫新增為**擴充功能**。
