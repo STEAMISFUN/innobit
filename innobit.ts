@@ -560,10 +560,10 @@ namespace innobit {
      */
    
     //% help=pins/digital-read-pin 
-    //% blockId="Fan_M22" weight=12 blockGap=17
+    //% blockId="PIRvalue" weight=12 blockGap=17
     //% block="PIR value|"
     //% subcategory="SPIR sensor"
-    export function Fan_M22(): number {
+    export function PIRvalue(): number {
         pins.digitalWritePin(DigitalPin.P0, 0);
         return pins.digitalReadPin(DigitalPin.P0);
     }
@@ -601,8 +601,49 @@ namespace innobit {
    }
 
 
+    ///////////////////// Input Sonar Sensors ///////////////////////
+    /**
+     * Send a ping and get the echo time (in microseconds) as a result
+     * @param trig trigger pin. eg: DigitalPin.P2
+     * @param echo echo pin. eg: DigitalPin.P8
+     * @param unit desired conversion unit. eg: YFPingUnit.Centimeters
+     * @param maxCmDistance maximum distance in centimeters (default is 450)
+     */
+    
+    //% subcategory="Sonar"
+    //% blockId="distanceCM" weight=12 blockGap=20
+    //% block="distance (cm)"
+    export function distanceCM(): number {
+        // send pulse
+        pins.setPull(DigitalPin.P8, PinPullMode.PullNone);
+        pins.digitalWritePin(DigitalPin.P8, 0);
+        control.waitMicros(10);
+        pins.digitalWritePin(DigitalPin.P8, 1);
+        control.waitMicros(50);
+        pins.digitalWritePin(DigitalPin.P8, 0);
 
+        // read pulse
+        const d = pins.pulseIn(DigitalPin.P0, PulseValue.High, 450 * 58);
+        return Math.idiv(d, 58);
+    }
 
+    //% subcategory="Sonar"
+    //% blockId="distanceInch" weight=12 blockGap=15
+    //% block="distance (inch)"
+    export function distanceInch(): number {
+        // send pulse
+        pins.setPull(DigitalPin.P8, PinPullMode.PullNone);
+        pins.digitalWritePin(DigitalPin.P8, 0);
+        control.waitMicros(10);
+        pins.digitalWritePin(DigitalPin.P8, 1);
+        control.waitMicros(50);
+        pins.digitalWritePin(DigitalPin.P8, 0);
+
+        // read pulse
+        const d = pins.pulseIn(DigitalPin.P0, PulseValue.High, 450 * 58);
+        return Math.idiv(d, 148);
+    }
+    
 
 
 
