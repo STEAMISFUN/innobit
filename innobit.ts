@@ -557,7 +557,7 @@ namespace innobit {
      */
     //% subcategory="Servo"
     //% weight=100 help=servos/set-angle
-    //% blockId=servoservosetangle block="set angle to %degrees=protractorPicker °"
+    //% blockId=servoservosetangle block="set servo angle to %degrees=protractorPicker degree"
     //% degrees.defl=90
     //% servo.fieldEditor="gridpicker"
     //% servo.fieldOptions.width=220
