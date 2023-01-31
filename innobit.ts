@@ -566,7 +566,7 @@ namespace innobit {
     //% parts=microservo trackArgs=0
     //% group="Positional"
     export function createServo(degrees: number) {
-        P1.setAngle(degrees);
+        P1.setAngle(degrees/2);
     }
 
 
