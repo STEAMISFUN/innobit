@@ -633,14 +633,14 @@ namespace innobit {
     export function distanceCM(): number {
         // send pulse
         pins.setPull(DigitalPin.P8, PinPullMode.PullNone);
-        pins.digitalWritePin(DigitalPin.P8, 0);
+        pins.digitalWritePin(DigitalPin.P0, 0);
         control.waitMicros(10);
-        pins.digitalWritePin(DigitalPin.P8, 1);
+        pins.digitalWritePin(DigitalPin.P0, 1);
         control.waitMicros(50);
-        pins.digitalWritePin(DigitalPin.P8, 0);
+        pins.digitalWritePin(DigitalPin.P0, 0);
 
         // read pulse
-        const d = pins.pulseIn(DigitalPin.P0, PulseValue.High, 450 * 58);
+        const d = pins.pulseIn(DigitalPin.P8, PulseValue.High, 450 * 58);
         return Math.idiv(d, 58);
     }
 
@@ -658,14 +658,14 @@ namespace innobit {
     export function distanceInch(): number {
         // send pulse
         pins.setPull(DigitalPin.P8, PinPullMode.PullNone);
-        pins.digitalWritePin(DigitalPin.P8, 0);
+        pins.digitalWritePin(DigitalPin.P0, 0);
         control.waitMicros(10);
-        pins.digitalWritePin(DigitalPin.P8, 1);
+        pins.digitalWritePin(DigitalPin.P0, 1);
         control.waitMicros(50);
-        pins.digitalWritePin(DigitalPin.P8, 0);
+        pins.digitalWritePin(DigitalPin.P0, 0);
 
         // read pulse
-        const d = pins.pulseIn(DigitalPin.P0, PulseValue.High, 450 * 58);
+        const d = pins.pulseIn(DigitalPin.P8, PulseValue.High, 450 * 58);
         return Math.idiv(d, 148);
     }
     
