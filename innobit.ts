@@ -661,14 +661,17 @@ namespace innobit {
         // send pulse
         pins.setPull(DigitalPin.P8, PinPullMode.PullNone);
         pins.digitalWritePin(DigitalPin.P0, 0);
-        control.waitMicros(10);
+        control.waitMicros(2);
         pins.digitalWritePin(DigitalPin.P0, 1);
-        control.waitMicros(50);
+        control.waitMicros(10);
         pins.digitalWritePin(DigitalPin.P0, 0);
 
         // read pulse
-        const d = pins.pulseIn(DigitalPin.P8, PulseValue.High, 450 * 58);
-        return Math.idiv(d, 148);
+        let d = pins.pulseIn(DigitalPin.P8, PulseValue.High);
+        let d_i =  Math.idiv(d, 148);
+        basic.pause(30);
+        return d_i;
+
     }
     
 
