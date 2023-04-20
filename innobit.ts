@@ -640,8 +640,8 @@ namespace innobit {
         pins.digitalWritePin(DigitalPin.P0, 0);
 
         // read pulse
-        led d = pins.pulseIn(DigitalPin.P8, PulseValue.High);
-        led d_c Math.idiv(d, 58);
+        let d = pins.pulseIn(DigitalPin.P8, PulseValue.High);
+        let d_c =  Math.idiv(d, 58);
         basic.pause(30);
         return d_c;
     }
