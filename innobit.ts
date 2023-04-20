@@ -642,8 +642,8 @@ namespace innobit {
         // read pulse
         led d = pins.pulseIn(DigitalPin.P8, PulseValue.High);
         led d_c Math.idiv(d, 58);
-        basic.pause(30)
-        return d_c
+        basic.pause(30);
+        return d_c;
     }
 
 
