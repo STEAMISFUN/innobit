@@ -34,5 +34,7 @@
   "{id:subcategory}Temperature and Humidity Sensor": "溫濕感應器",
   "{id:subcategory}Electric Fan": "風扇",
   "{id:subcategory}SPIR sensor": "人體紅外線",
-  "{id:subcategory}Sonar": "超聲波感應器"
+  "{id:subcategory}Sonar": "超聲波感應器",
+  "{id:subcategory}Raindrop sensor": "雨滴感應器"
+}
 }
