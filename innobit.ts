@@ -674,60 +674,7 @@ namespace innobit {
 
     }
             
-    ///////////////////// Input Raindrop Sensors ///////////////////////
-    /**
-     * Send a ping and get the echo time (in microseconds) as a result
-        *trigger pin is DigitalPin.P0
-        *echo pin is DigitalPin.P8
-     *  maximum distance in centimeters (default is 450)
-     */
     
-    //% subcategory="Raindrop sensor"
-    //% blockId="distanceCM" weight=12 blockGap=20
-    //% block="distance (cm)"
-    export function distanceCM(): number {
-        // send pulse
-        pins.setPull(DigitalPin.P8, PinPullMode.PullNone);
-        pins.digitalWritePin(DigitalPin.P0, 0);
-        control.waitMicros(2);
-        pins.digitalWritePin(DigitalPin.P0, 1);
-        control.waitMicros(10);
-        pins.digitalWritePin(DigitalPin.P0, 0);
-
-        // read pulse
-        let d = pins.pulseIn(DigitalPin.P8, PulseValue.High);
-        let d_c =  Math.idiv(d, 58);
-        basic.pause(30);
-        return d_c;
-    }
-
-
-    /**
-        * Send a ping and get the echo time (in microseconds) as a result
-        *trigger pin is DigitalPin.P0
-        *echo pin is DigitalPin.P8
-        *maximum distance in Inch (default is 450)
-        */
-
-    //% subcategory="Raindrop sensor"
-    //% blockId="distanceInch" weight=12 blockGap=15
-    //% block="distance (inch)"
-    export function distanceInch(): number {
-        // send pulse
-        pins.setPull(DigitalPin.P8, PinPullMode.PullNone);
-        pins.digitalWritePin(DigitalPin.P0, 0);
-        control.waitMicros(2);
-        pins.digitalWritePin(DigitalPin.P0, 1);
-        control.waitMicros(10);
-        pins.digitalWritePin(DigitalPin.P0, 0);
-
-        // read pulse
-        let d = pins.pulseIn(DigitalPin.P8, PulseValue.High);
-        let d_i =  Math.idiv(d, 148);
-        basic.pause(30);
-        return d_i;
-
-    }
     
 
 
