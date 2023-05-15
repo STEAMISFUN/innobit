@@ -32,6 +32,8 @@
   "{id:subcategory}Servo": "Servo",
   "{id:subcategory}Temperature and Humidity Sensor": "Temperature and Humidity Sensor",
   "{id:subcategory}Electric Fan": "Electric Fan",
-  "{id:subcategory}SPIR sensor": "SPIR sensor"
+  "{id:subcategory}SPIR sensor": "SPIR sensor",
+  "{id:subcategory}Raindrop sensor":"Raindrop sensor"
+}
 
 }
