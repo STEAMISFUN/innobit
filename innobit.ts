@@ -674,6 +674,18 @@ namespace innobit {
 
     }
             
+    //% subcategory="Raindrop sensor"
+    //% blockId=isRaindrop
+    //% block="is water detected?"
+    //%  weight=90
+    export function Raindrop(): boolean {
+        if(pins.analogReadPin(AnalogPin.P0) > 500){
+            return true
+        }else{
+            return false
+        }
+    }
+            
     
     
 
