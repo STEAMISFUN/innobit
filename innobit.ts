@@ -685,6 +685,19 @@ namespace innobit {
             return false
         }
     }
+
+    //% subcategory="Flame sensor"
+    //% blockId=flame
+    //% block="is flame detected?"
+    //%  weight=90
+    export function flame(): boolean {
+        if (pins.analogReadPin(AnalogPin.P0) < 400) {
+            return true
+        } else {
+            return false
+        }
+        
+    }
             
     
     

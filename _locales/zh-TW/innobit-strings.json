@@ -26,6 +26,7 @@
   "innobit.distanceCM|block": "距離 (厘米) ",
   "innobit.distanceInch|block": "距離 (吋) ",
   "innobit.Raindrop|block": "感應到雨水?",
+  "innobit.flame|block": "感應到火焰?",
   "innobit|block": "innobit",
   "{id:category}innobit": "Innobit",
   "{id:group}Positional": "Positional",
@@ -36,6 +37,7 @@
   "{id:subcategory}Electric Fan": "風扇",
   "{id:subcategory}SPIR sensor": "人體紅外線",
   "{id:subcategory}Sonar": "超聲波感應器",
-  "{id:subcategory}Raindrop sensor": "雨滴感應器"
+  "{id:subcategory}Raindrop sensor": "雨滴感應器",
+  "{id:subcategory}Flame sensor": "火焰感應器"
 }
 
