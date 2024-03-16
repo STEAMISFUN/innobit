@@ -702,10 +702,9 @@ namespace innobit {
     ///////////////////// Output - Voice Recorder Module ///////////////////////
     
     //% subcategory="Recorder"
-    //% blockId=voiceRecorderModule weight=84 blockGap=15
+    //% blockId=voiceRecorderModule 
     //% block="Play recorded voice once"
     export function voiceRecorderModule(): void {
-
             pins.digitalWritePin(DigitalPin.P1, 0)
             control.waitMicros(2); // 2us
             pins.digitalWritePin(DigitalPin.P1, 1)
