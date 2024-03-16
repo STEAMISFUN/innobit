@@ -31,16 +31,6 @@ enum NeoPixelMode {
     //% block="RGB (RGB format)"
     RGB_RGB = 3
 }
-enum YFVRMFunction {
-    //% blockId="YFVRM_PLAY_ONCE" block="Play Once"
-    PLAY_ONCE,
-    //% blockId="YFVRM_PLAY_LOOP" block="Play loop(Stop with power off)"
-    PLAY_LOOP,
-    //% blockId="YFVRM_SPEAKER_ENABLE" block="Speaker Enable"
-    SPEAKER_ENABLE,
-    //% blockId="YFVRM_SPEAKER_DISABLE" block="Speaker Disable"
-    SPEAKER_DISABLE
-}
 
 
 //% weight=100 color=#2699BF icon=""
@@ -713,26 +703,15 @@ namespace innobit {
     
     //% subcategory="Recorder"
     //% blockId=voiceRecorderModule weight=84 blockGap=15
-    //% block="voice recorder  %vrmfun"
-    //% vrmfun.fieldEditor="gridpicker" vrmfun.fieldOptions.columns=2
-    export function voiceRecorderModule(vrmfun: YFVRMFunction): void {
-        if (vrmfun == YFVRMFunction.PLAY_ONCE) {
+    //% block="Play recorded voice once"
+    export function voiceRecorderModule(): void {
+
             pins.digitalWritePin(DigitalPin.P1, 0)
             control.waitMicros(2); // 2us
             pins.digitalWritePin(DigitalPin.P1, 1)
             basic.pause(50); // 30ms
             pins.digitalWritePin(DigitalPin.P1, 0)
-        } else if (vrmfun == YFVRMFunction.PLAY_LOOP) {
-            pins.digitalWritePin(DigitalPin.P1, 0)
-            control.waitMicros(2); // 2us
-            pins.digitalWritePin(DigitalPin.P1, 1)
-            basic.pause(2050); // 2s
-            pins.digitalWritePin(DigitalPin.P1, 0)
-        } else if (vrmfun == YFVRMFunction.SPEAKER_ENABLE) {
-            pins.digitalWritePin(DigitalPin.P1, 0)
-        } else if (vrmfun == YFVRMFunction.SPEAKER_DISABLE) {
-            pins.digitalWritePin(DigitalPin.P1, 1)
-        }
+        
     }
     
 
