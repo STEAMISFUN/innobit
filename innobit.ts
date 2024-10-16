@@ -713,7 +713,34 @@ namespace innobit {
         
     }
     
+    //% subcategory="Line_following"
+    //% blockId=Line_following_IR2
+    //% block="Is IR2 Black? "
+    export function Line_following_IR2(): boolean {
+        pins.setPull(DigitalPin.P0, PinPullMode.PullNone);
+        let a: number = 1;
+        a = pins.digitalReadPin(DigitalPin.P0);
+        if (a==0){
+            return true;
+        }else{
+            return false;
+        }
 
+    }
+    //% subcategory="Line_following"
+    //% blockId=Line_following_IR1
+    //% block="Is IR1 Black? "
+    export function Line_following_IR1(): boolean {
+        pins.setPull(DigitalPin.P8, PinPullMode.PullNone);
+        let a: number = 1;
+        a = pins.digitalReadPin(DigitalPin.P8);
+        if (a == 0) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
 
 
 }

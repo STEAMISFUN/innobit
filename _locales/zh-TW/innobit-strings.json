@@ -28,6 +28,8 @@
   "innobit.Raindrop|block": "感應到雨水?",
   "innobit.flame|block": "感應到火焰?",
   "innobit.voiceRecorderModule|block":"播放錄音一次",
+  "innobit.Line_following_IR2|block":"IR2(右邊) 看到黑色?",
+  "innobit.Line_following_IR1|block": "IR1(左邊) 看到黑色?",
   "innobit|block": "innobit",
   "{id:category}innobit": "Innobit",
   "{id:group}Positional": "Positional",
@@ -40,6 +42,7 @@
   "{id:subcategory}Sonar": "超聲波感應器",
   "{id:subcategory}Raindrop sensor": "雨滴感應器",
   "{id:subcategory}Flame sensor": "火焰感應器",
-  "{id:subcategory}Recorder": "錄放模組"
+  "{id:subcategory}Recorder": "錄放模組",
+  "{id:subcategory}Line_following": "巡線模組"
 }
 
